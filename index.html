@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <title>Food Bank POC - Data Entry</title>
+    <script type="text/javascript" src="https://unpkg.com/@zxing/library@latest"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="js/index.js"></script>
+  </head>  
+  <body>
+    <video
+      id="video"
+      width="300"
+      height="200"
+      style="border: 1px solid gray"
+    ></video>
+    <div id='status'>Waiting for input...</div>
+    <form>
+      <div>
+        <label for="Barcode">Barcode</label><input type="text" name="Barcode"><input id="lookup" type="button" value="Lookup"><input id="scan" type="button" value="Scan">
+        <input type="hidden" name="Product" value="">
+      </div>
+      <div>
+        <label for="Quantity">Quantity</label><input type="number" inputmode="numeric" step="1" min="1" name="Quantity">
+      </div>
+      <div id="product-details">
+        <div>
+          <label for="Description">Description</label><input type="text" name="Description" readonly>
+        </div>
+        <div>
+          <label for="Size">Size</label>
+          <input type="text" name="Size" readonly>
+          <select name="UOM" disabled>
+            <option value=""></option>
+            <option value="g">g</option>
+            <option value="kg">kg</option>
+            <option value="ea">ea</option>
+            <option value="l">l</option>
+            <option value="ml">ml</option>
+          </select>
+        </div>
+        <div>
+          <label for="Category">Category</label><input type="text" name="Category" readonly>
+        </div>
+        <div>
+          <label for="Halal?">Halal?</label><input type="checkbox" name="Halal?" disabled>
+        </div>
+      </div>
+      <input type="submit" value="Submit">
+      <input type="reset" value="Reset">
+    </form>
+  </body>
+
+</html>
