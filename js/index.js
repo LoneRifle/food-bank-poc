@@ -1,6 +1,7 @@
 const API_KEY = 'keyhlCvW8cKeIALjf'
 const INCOMING_ITEMS = 'https://api.airtable.com/v0/appK5r1OQWwkZ1t6L/Incoming%20Items'
 const INVENTORY = 'https://api.airtable.com/v0/appK5r1OQWwkZ1t6L/Inventory'
+const FOOD_FACTS = 'https://sg.openfoodfacts.org/api/v0/product/'
 
 function log (text) {
   $('#status').text(text)
@@ -58,6 +59,26 @@ function addIncomingItem () {
   })
 }
 
+function lookupFoodFacts (barcode, callback) {
+  $.get({
+    url: FOOD_FACTS + barcode,
+    success: data => {
+      const { product } = data
+      if (product) {
+        $('input[name=Description]').val(product.product_name)
+        const sizeDetails = /(\d+)(.*)/.exec(product.serving_size)
+        if (sizeDetails) {
+          const [, size, uom] = sizeDetails
+          $('input[name=Size]').val(size)
+          $('select[name=UOM]').val(uom)
+        }
+      } 
+      callback()
+    },
+    dataType: 'json',
+  })
+}
+
 function go () {
   $('#scan').click(async () => {
     const codeReader = new ZXing.BrowserBarcodeReader()
@@ -93,7 +114,7 @@ function go () {
           $('input[name=Halal\\?]').prop('checked', record.fields['Halal?'])
         } else {
           log('This is a new product =(')
-          toggleProductFields(false)
+          lookupFoodFacts(barcode, () => toggleProductFields(false))
         }
       },
       dataType: 'json',
