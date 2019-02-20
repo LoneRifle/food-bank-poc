@@ -7,6 +7,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <script src="js/index.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <link href="style.css" rel="stylesheet type="text/css>
   </head>
   <div class="jumbotron jumbotron-fluid" style="background-color:inherit; text-align: -webkit-center;">
@@ -17,25 +18,32 @@
   </div>
   <body class="container">
     <div class="container" id="videoContainer">
-      <span>
+      <span id="videoSpan">
         <video
           id="video"
         ></video>
       </span>
     </div>
-    <div id='status'>Waiting for input...</div>
+
+    <p class="text-center">Press Scan button below and position barcode within the frame.</p>
+
+    <div class="container">
+      <button id="lookup" type="button" class="btn btn-default btn-circle" value="Lookup"><i class="fa fa-keyboard"></i></button>
+      <button id="scan" type="button" class="btn btn-default btn-circle" value="Scan"><i class="fa fa-barcode"></i></button>
+    </div>
+
+    
+    <!-- <div id='status'>Waiting for input...</div>
     <div class="container">
       <form>
         <div class="form-group">
           <label for="Barcode">Barcode</label>
           <div class="form-row">
-            <div class="col-md-8">
+            <div class="col-md-10">
               <input type="text" class="form-control" name="Barcode">
             </div>
             <div class="col-md-2">
               <input id="lookup" type="button" class="form-control" value="Lookup">
-            </div>
-            <div class="col-md-2">
               <input id="scan" type="button" class="form-control" value="Scan">
             </div>
             <input type="hidden" name="Product" value="">
@@ -81,7 +89,7 @@
         <button type="submit" class="btn btn-primary" value="Submit">Submit</button>
         <button type="reset" class="btn btn-primary" value="Reset">Reset</button>
       </form>
-    </div>
+    </div> -->
   </body>
 
 </html>
