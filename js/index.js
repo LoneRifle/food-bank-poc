@@ -23,7 +23,7 @@ async function registerNewProduct () {
   record.fields.Barcode = { text: $('input[name=Barcode]').val() }
 
   const post = $.post({
-    url: `${INVENTORY}?api_key=${API_KEY}`, 
+    url: `${INVENTORY}?api_key=${API_KEY}`,
     data: JSON.stringify(record),
     success: data => {
       log('Registered new product!')
@@ -46,7 +46,7 @@ function addIncomingItem () {
   record.fields.Product = [record.fields.Product]
   record.fields.Quantity = Number(record.fields.Quantity)
   $.post({
-    url: `${INCOMING_ITEMS}?api_key=${API_KEY}`, 
+    url: `${INCOMING_ITEMS}?api_key=${API_KEY}`,
     data: JSON.stringify(record),
     success: data => {
       log('Item added!')
@@ -72,7 +72,7 @@ function lookupFoodFacts (barcode, callback) {
           $('input[name=Size]').val(size)
           $('select[name=UOM]').val(uom)
         }
-      } 
+      }
       callback()
     },
     dataType: 'json',
@@ -86,6 +86,7 @@ function go () {
     codeReader
       .decodeFromInputVideoDevice(undefined, 'video')
       .then(result => {
+        $('#launchForm').trigger('click')
         $('input[name=Barcode]').val(result.text)
         $('#lookup').trigger('click')
         codeReader.reset()
