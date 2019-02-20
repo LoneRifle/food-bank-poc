@@ -1,12 +1,19 @@
+body {
+    background-color: #d9b334;
+}
+
+.modal-header, .modal-body {
+    background-color: #f6f7f7;
+}
+
+label {
+    color:#c97609
+}
 
 #video {
     width: -webkit-fill-available;
     height: -webkit-fill-available;
     background-color: #dfc056;
-}
-
-body {
-    background-color: #d9b334;
 }
 
 #videoContainer {
@@ -59,4 +66,29 @@ body {
     border-radius: 50%;
     text-align: center;
     font-size: 20px;
+}
+
+.btn-primary, .btn-primary:hover {
+    background-color: #252540;
+    border-color: #252540;
+}
+
+.btn-close, .btn-close:hover {
+  width: 35px;
+  height: 35px;
+  padding: 6px 0px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 15px;
+  background-color: #c97505;
+  border-color: #c97505;
+}
+
+.checkbox input:before {
+  content: '';
+  background: #fff;
+  display: block;
+  width: 10px;
+  height: 10px;
+  border: 1px solid black;
 }
