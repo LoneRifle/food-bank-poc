@@ -86,7 +86,6 @@ function go () {
     codeReader
       .decodeFromInputVideoDevice(undefined, 'video')
       .then(result => {
-        $('#launchForm').trigger('click')
         $('input[name=Barcode]').val(result.text)
         $('#lookup').trigger('click')
         codeReader.reset()
@@ -94,8 +93,14 @@ function go () {
       .catch(err => console.error(err))
   })
 
+  $('#enterBarcode').click(async () => {
+    $('input[name=Barcode]').val($('input[name=BarcodeInput]').val())
+    $('#lookup').trigger('click')
+  })
+
 
   $('#lookup').click(() => {
+    $('#launchForm').trigger('click')
     $('input[name=Product]').val(undefined)
     $('#product-details input').val(undefined)
     $('select[name=UOM]').val('')
