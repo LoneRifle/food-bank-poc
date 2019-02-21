@@ -100,7 +100,6 @@ function go () {
 
 
   $('#lookup').click(() => {
-    $('#launchForm').trigger('click')
     $('input[name=Product]').val(undefined)
     $('#product-details input').val(undefined)
     $('select[name=UOM]').val('')
@@ -126,6 +125,7 @@ function go () {
       dataType: 'json',
       contentType: 'application/json',
     })
+    $('#launchForm').trigger('click');
   })
 
 
