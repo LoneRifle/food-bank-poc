@@ -2,6 +2,10 @@ body {
     background-color: #d9b334;
 }
 
+.button-container {
+  text-align: center;
+}
+
 .modal-header, .modal-body {
     background-color: #f6f7f7;
 }

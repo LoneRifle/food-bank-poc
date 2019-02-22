@@ -12,8 +12,8 @@
   </head>
   <div class="jumbotron jumbotron-fluid" style="background-color:inherit; text-align: -webkit-center;">
     <div class="container">
-      <h1 class="display-4" style="color:#b3932b">INVENTORY</h1>
-      <h1 class="display-4" style="color:#b3932b">SCANNER</h1>
+      <h1 class="display-5" style="color:#b3932b">INVENTORY</h1>
+      <h1 class="display-5" style="color:#b3932b">SCANNER</h1>
     </div>
   </div>
   <body class="container">
@@ -26,15 +26,17 @@
         <input type="hidden" name="Product" value="">
       </div>
 
-      <div class="container">
+      <div class="button-container">
         <button id="clear" type="reset" class="btn btn-default btn-circle-orange" value="Clear"><i class="fa fa-times white-icon"></i></button>
         <button id="enterBarcode" type="button" class="btn btn-default btn-circle-blue" value="Lookup"><i class="fa fa-arrow-right white-icon"></i></button>
         <button id="scan" type="button" class="btn btn-default btn-circle" value="Scan" onclick="location.href='../index.html' "><i class="fa fa-barcode"></i></button>
-        <button id="launchForm" type="button" class="btn btn-default btn-circle" data-toggle="modal" data-target="#modalForm" style="visibility:hidden"></button>
-        <button id="lookup" type="button" class="btn btn-default btn-circle" value="Lookup" style="visibility:hidden"></button>
       </div>
 
     </form>
+
+
+    <button id="launchForm" type="button" class="btn btn-default btn-circle" data-toggle="modal" data-target="#modalForm" style="visibility:hidden"></button>
+    <button id="lookup" type="button" class="btn btn-default btn-circle" value="Lookup" style="visibility:hidden"></button>
 
     <div class="modal fade" id="modalForm" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
