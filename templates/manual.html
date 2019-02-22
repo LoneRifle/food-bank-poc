@@ -6,9 +6,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-    <script src="js/index.js"></script>
+    <script src="../js/index.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
-    <link href="style.css" rel="stylesheet type="text/css>
+    <link href="../style.css" rel="stylesheet type="text/css>
   </head>
   <div class="jumbotron jumbotron-fluid" style="background-color:inherit; text-align: -webkit-center;">
     <div class="container">
@@ -17,15 +17,25 @@
     </div>
   </div>
   <body class="container">
-    <div class="container" id="videoContainer">
-      <span id="videoSpan">
-        <video
-          id="video"
-        ></video>
-      </span>
-    </div>
 
-    <p class="text-center">Press Scan button below and position barcode within the frame.</p>
+    <p class="text-center">Type product barcode</p>
+
+    <form>
+      <div class="form-group">
+        <input type="text" class="form-control" name="BarcodeInput">
+        <input type="hidden" name="Product" value="">
+      </div>
+
+      <div class="container" id="barcode-entry-container">
+        <button id="clear" type="reset" class="btn btn-default btn-circle" value="Clear">
+          <img src="../static/reset.svg">
+        </button>
+        <button id="enterBarcode" type="button" class="btn btn-default btn-circle" value="Lookup">
+          <img src="../static/proceed.svg">
+        </button>
+      </div>
+
+    </form>
 
     <div class="container-hidden">
       <button id="launchForm" type="button" class="btn btn-default btn-circle" data-toggle="modal" data-target="#modalForm"></button>
@@ -33,15 +43,15 @@
     </div>
 
     <div class="container" id="button-container">
-      <img id='group-img' src="static/group-3@3x.png" style="width:100%">
-      <button id="scan" type="button" class="btn btn-default btn-circle" value="Scan">
-        <img src="static/scan-blue.svg">
+      <img id='group-img' src="../static/group-3@3x.png" style="width:100%">
+      <button id="scan" type="button" class="btn btn-default btn-circle" value="Scan" onclick="location.href='../index.html' ">
+        <img src="../static/scan-blue.svg">
       </button>
-      <button id="manual" type="button" class="btn btn-default btn-circle" onclick="location.href='templates/manual.html' ">
-        <img src="static/manual-blue.svg">
+      <button id="manual" type="button" class="btn btn-default btn-circle" onclick="location.href='manual.html' ">
+        <img src="../static/manual-blue.svg">
       </button>
       <button id="history" type="button" class="btn btn-default btn-circle" value="History">
-        <img src="static/history-blue.svg">
+        <img src="../static/history-blue.svg">
       </button>
     </div>
 
@@ -91,7 +101,7 @@
                   <input class="checkbox pull-right" type="checkbox" name="Halal?" disabled>
                 </div>
               </div>
-              <button type="submit" class="btn btn-primary" value="Submit" data-dismiss="modal" >SUBMIT</button>
+              <button type="submit" class="btn btn-primary" value="Submit" data-dismiss="modal">SUBMIT</button>
             </form>
           </div>
         </div>
