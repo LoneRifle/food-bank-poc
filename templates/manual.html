@@ -29,14 +29,27 @@
       <div class="button-container">
         <button id="clear" type="reset" class="btn btn-default btn-circle-orange" value="Clear"><i class="fa fa-times white-icon"></i></button>
         <button id="enterBarcode" type="button" class="btn btn-default btn-circle-blue" value="Lookup"><i class="fa fa-arrow-right white-icon"></i></button>
-        <button id="scan" type="button" class="btn btn-default btn-circle" value="Scan" onclick="location.href='../index.html' "><i class="fa fa-barcode"></i></button>
       </div>
 
     </form>
 
+    <div class="container-hidden">
+      <button id="launchForm" type="button" class="btn btn-default btn-circle" data-toggle="modal" data-target="#modalForm"></button>
+      <button id="lookup" type="button" class="btn btn-default btn-circle" value="Lookup"></button>
+    </div>
 
-    <button id="launchForm" type="button" class="btn btn-default btn-circle" data-toggle="modal" data-target="#modalForm" style="visibility:hidden"></button>
-    <button id="lookup" type="button" class="btn btn-default btn-circle" value="Lookup" style="visibility:hidden"></button>
+    <div class="container" id="button-container">
+      <img id='group-img' src="../static/group-3@3x.png" style="width:100%">
+      <button id="scan" type="button" class="btn btn-default btn-circle" value="Scan" onclick="location.href='../index.html' ">
+        <img src="../static/scan-blue.svg">
+      </button>
+      <button id="manual" type="button" class="btn btn-default btn-circle" onclick="location.href='manual.html' ">
+        <img src="../static/manual-blue.svg">
+      </button>
+      <button id="history" type="button" class="btn btn-default btn-circle" value="History">
+        <img src="../static/history-blue.svg">
+      </button>
+    </div>
 
     <div class="modal fade" id="modalForm" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
