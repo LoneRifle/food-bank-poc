@@ -42,11 +42,15 @@ body {
 #clear {
     position: relative;
     left: 22.5%;
+    width: auto;
+    height: auto;
 }
 
 #enterBarcode {
     position: relative;
     left: 55%;
+    width: auto;
+    height: auto;
 }
 
 .modal-header, .modal-body {
