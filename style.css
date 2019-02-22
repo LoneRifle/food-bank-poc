@@ -17,6 +17,8 @@ label {
 }
 
 #videoContainer {
+    height: 400px;
+    width: auto;
     position: relative;
     margin: 20px;
     background: none;
