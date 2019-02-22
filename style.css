@@ -6,8 +6,29 @@ body {
     background-color: #f6f7f7;
 }
 
+.display-5 {
+    opacity: 0.4;
+    mix-blend-mode: multiply;
+    font-family: BwModelica;
+    font-size: 27px;
+    font-weight: 800;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.19;
+    letter-spacing: normal;
+    text-align: center;
+    color: #999999;
+}
+
 label {
-    color:#c97609
+    font-family: BwModelica;
+    font-size: 16px;
+    font-weight: 800;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #cf8103;
 }
 
 #video {
@@ -17,8 +38,8 @@ label {
 }
 
 #videoContainer {
-    height: 400px;
-    width: auto;
+    height: 27%;
+    width: 100%;
     position: relative;
     margin: 20px;
     background: none;
@@ -62,8 +83,8 @@ label {
 }
 
 .btn-circle {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     padding: 6px 0px;
     border-radius: 50%;
     text-align: center;
@@ -71,8 +92,8 @@ label {
 }
 
 .btn-circle-orange {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     padding: 6px 0px;
     border-radius: 50%;
     text-align: center;
@@ -82,8 +103,8 @@ label {
 }
 
 .btn-circle-blue {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     padding: 6px 0px;
     border-radius: 50%;
     text-align: center;
@@ -93,8 +114,19 @@ label {
 }
 
 .btn-primary, .btn-primary:hover {
-    background-color: #252540;
-    border-color: #252540;
+    background-color: #292949;
+    border-color: #292949;
+    font-family: BwModelica;
+    font-size: 23px;
+    font-weight: 800;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.7px;
+    text-align: center;
+    color: #f0f0f0;
+    box-shadow: 0 5px 12px 0 rgba(41, 41, 73, 0.2);
+    background-color: #292949;
 }
 
 .btn-close, .btn-close:hover {
@@ -123,4 +155,17 @@ label {
 
 .white-icon {
     color: #fff;
+}
+
+.modal-title {
+  width: 345px;
+  height: 37px;
+  font-family: BwModelica;
+  font-size: 22px;
+  font-weight: 800;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.45;
+  letter-spacing: normal;
+  color: #292949;
 }
