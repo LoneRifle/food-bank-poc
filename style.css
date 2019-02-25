@@ -1,5 +1,5 @@
 body {
-    background-color: #d9b334;
+    background-color: #debc3b;
 }
 
 label {
@@ -97,7 +97,7 @@ p {
 #video {
     width: -webkit-fill-available;
     height: -webkit-fill-available;
-    background-color: #dfc056;
+    background-color: rgba(250, 250, 250, 0.2);
 }
 
 #videoContainer {
