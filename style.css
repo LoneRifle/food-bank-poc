@@ -21,6 +21,10 @@ p {
     line-height: 32px;
 }
 
+form {
+    margin: 0% 5%
+}
+
 .display-5 {
     opacity: 0.4;
     mix-blend-mode: multiply;
@@ -88,20 +92,24 @@ p {
 
 #clear {
     position: relative;
-    left: 22.5%;
+    left: 22%;
     width: auto;
     height: auto;
 }
 
 #enterBarcode {
     position: relative;
-    left: 55%;
+    left: 50%;
     width: auto;
     height: auto;
 }
 
-.modal-header, .modal-body {
-    background-color: #f6f7f7;
+.modal-content {
+    background-color: #f7f8f8;
+}
+
+.modal-header {
+    margin: 0% 5%;
 }
 
 .container-hidden {
