@@ -131,6 +131,7 @@ function go () {
 
   $('form').on('submit', async e => {
     e.preventDefault()
+    $('#modalForm').modal('hide');
     if ($('input[name=Product]').val() === '') {
       await registerNewProduct()
     }
