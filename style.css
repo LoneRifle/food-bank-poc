@@ -1,9 +1,23 @@
+@font-face {
+    font-family: BwModelica-Medium;
+    src: url("../static/fonts/bwmodelica-medium-webfont.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: BwModelica-ExtraBold;
+    src: url("../static/fonts/bwmodelica-extrabold-webfont.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     background-color: #debc3b;
 }
 
 label {
-    font-family: BwModelica;
+    font-family: BwModelica-ExtraBold;
     font-size: 16px;
     font-weight: 800;
     font-style: normal;
@@ -14,7 +28,7 @@ label {
 }
 
 p {
-    font-family: BwModelica;
+    font-family: BwModelica-Medium;
     margin-top: 10%;
     margin-bottom: 10%;
     font-size: 22px;
@@ -28,7 +42,7 @@ form {
 .display-5 {
     opacity: 0.4;
     mix-blend-mode: multiply;
-    font-family: BwModelica;
+    font-family: BwModelica-ExtraBold;
     font-size: 27px;
     font-weight: 800;
     font-style: normal;
@@ -49,7 +63,7 @@ form {
   color: #999999;
   opacity: 0.4;
   letter-spacing: 0.7px;
-  font-family: BwModelica;
+  font-family: BwModelica-Medium;
   font-weight: 500;
 }
 
@@ -182,7 +196,7 @@ form {
 .btn-primary, .btn-primary:hover {
     background-color: #292949;
     border-color: #292949;
-    font-family: BwModelica;
+    font-family: BwModelica-ExtraBold;
     font-size: 23px;
     font-weight: 800;
     font-style: normal;
@@ -226,7 +240,7 @@ form {
 .modal-title {
   width: 345px;
   height: 37px;
-  font-family: BwModelica;
+  font-family: BwModelica-ExtraBold;
   font-size: 22px;
   font-weight: 800;
   font-style: normal;
